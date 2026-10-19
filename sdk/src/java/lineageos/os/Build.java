@@ -17,10 +17,10 @@ public class Build {
     public static final String UNKNOWN = "unknown";
 
     /** A build ID utilized to distinguish lineageos versions */
-    public static final String EVOLUTION_VERSION = getString("ro.evolution.version");
+    public static final String EVOLUTION_VERSION = org.evolution.build.Version.VALUE;
 
     /** A build ID string meant for displaying to the user */
-    public static final String EVOLUTION_DISPLAY_VERSION = getString("ro.evolution.display.version");
+    public static final String EVOLUTION_DISPLAY_VERSION = org.evolution.build.DisplayVersion.VALUE;
 
     private static final SparseArray<String> sdkMap;
     static
@@ -181,9 +181,5 @@ public class Build {
             return UNKNOWN;
         }
         return name;
-    }
-
-    private static String getString(String property) {
-        return SystemProperties.get(property, UNKNOWN);
     }
 }
