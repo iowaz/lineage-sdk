@@ -56,6 +56,8 @@ filegroup {
     srcs: [
         "sdk/src/java/lineageos/**/*.java",
         "sdk/src/java/lineageos/**/I*.aidl",
+        ":evolution-build-info-version",
+        ":evolution-build-info-display-version",
     ],
 }
 
