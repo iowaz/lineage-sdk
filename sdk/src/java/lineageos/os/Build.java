@@ -10,7 +10,9 @@ import android.text.TextUtils;
 import android.util.SparseArray;
 
 /**
- * Information about the current LineageOS build, extracted from system properties.
+ * Information about the current LineageOS build. {@link #EVOLUTION_VERSION} and
+ * {@link #EVOLUTION_DISPLAY_VERSION} are constants set at build time;
+ * {@link LINEAGE_VERSION#SDK_INT} is extracted from a system property.
  */
 public class Build {
     /** Value used for when a build property is unknown. */
